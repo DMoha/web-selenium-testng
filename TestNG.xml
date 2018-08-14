@@ -1,0 +1,15 @@
+<suite name="GurukulamTestSuite" >
+<test name="FunctionalityTest" >
+ 
+ <classes>
+
+  <class name="com.myproject.automationframework.tests.EntitiesBranchTest" />
+  <class name="com.myproject.automationframework.tests.EntitiesStaffTest" />
+  <class name="com.myproject.automationframework.tests.LoginUserDetailsTest" />
+  <class name="com.myproject.automationframework.tests.NewRegistrationTest" />
+    
+ </classes>
+ 
+ </test>
+ 
+ </suite>

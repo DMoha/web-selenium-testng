@@ -1,0 +1,1470 @@
+<html>
+<head>
+<title>TestNG:  FunctionalityTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>FunctionalityTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>44/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 14 22:20:48 CEST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>1708 seconds (1708544 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 1, [[Ljava.lang.Object;@5b6813df<br/>
+<a href="#Output-1489193907" onClick='toggleBox("Output-1489193907", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1489193907" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1489193907">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Alex Doe>||<br/>
+[FAILURE] New Staff Branch dropdowndoes not have the provided value ||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: New Staff Branch dropdowndoes not have the provided value 
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.SelectByText(Actions.java:191)
+	at com.myproject.automationframework.pageobjects.EntitiesStaffPage.createNewStaffDetails(EntitiesStaffPage.java:34)
+	at com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff(EntitiesStaffTest.java:30)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1489193907", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1489193907'><pre>java.lang.AssertionError: New Staff Branch dropdowndoes not have the provided value 
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.SelectByText(Actions.java:191)
+	at com.myproject.automationframework.pageobjects.EntitiesStaffPage.createNewStaffDetails(EntitiesStaffPage.java:34)
+	at com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff(EntitiesStaffTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>48</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.editBranchDetails()'><b>editBranchDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 1, [[Ljava.lang.Object;@5f2606b<br/>
+<a href="#Output-594858858" onClick='toggleBox("Output-594858858", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-594858858" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-594858858">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+[FAILURE] Requested record is not present in the list||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Requested record is not present in the list
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.clickEditButton(Actions.java:312)
+	at com.myproject.automationframework.pageobjects.EntitiesBranchPage.editBranchDetails(EntitiesBranchPage.java:87)
+	at com.myproject.automationframework.tests.EntitiesBranchTest.editBranchDetails(EntitiesBranchTest.java:62)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace594858858", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace594858858'><pre>java.lang.AssertionError: Requested record is not present in the list
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.clickEditButton(Actions.java:312)
+	at com.myproject.automationframework.pageobjects.EntitiesBranchPage.editBranchDetails(EntitiesBranchPage.java:87)
+	at com.myproject.automationframework.tests.EntitiesBranchTest.editBranchDetails(EntitiesBranchTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>19</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration()'><b>newUserRegistration</b><br>Test class: com.myproject.automationframework.tests.NewRegistrationTest<br>Parameters: 1, [[Ljava.lang.Object;@2b58f754<br/>
+<a href="#Output-756080817" onClick='toggleBox("Output-756080817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-756080817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-756080817">
+Clicked on Register a New Account Link||<br/>
+<EnterText on Login textbox as johnadmin>||<br/>
+<EnterText on Email textbox as johnadmin@localhost.com>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+<EnterText on Confirm Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+[FAILURE] New User Registration has Failed||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: New User Registration has Failed
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.pageobjects.RegistrationPage.EnterAuthenticationDetails(RegistrationPage.java:34)
+	at com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration(NewRegistrationTest.java:19)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace756080817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace756080817'><pre>java.lang.AssertionError: New User Registration has Failed
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.pageobjects.RegistrationPage.EnterAuthenticationDetails(RegistrationPage.java:34)
+	at com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration(NewRegistrationTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.myproject.automationframework.tests.NewRegistrationTest@56ac3a89</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration()'><b>newUserRegistration</b><br>Test class: com.myproject.automationframework.tests.NewRegistrationTest<br>Parameters: 2, [[Ljava.lang.Object;@3ebff828<br/>
+<a href="#Output-1627010197" onClick='toggleBox("Output-1627010197", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1627010197" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1627010197">
+Clicked on Register a New Account Link||<br/>
+<EnterText on Login textbox as adminuser>||<br/>
+<EnterText on Email textbox as adminuser@localhost>||<br/>
+<EnterText on Password textbox as admin123>||<br/>
+<EnterText on Confirm Password textbox as admin123>||<br/>
+Clicked on Authenticate button||<br/>
+[FAILURE] New User Registration has Failed||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: New User Registration has Failed
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.pageobjects.RegistrationPage.EnterAuthenticationDetails(RegistrationPage.java:34)
+	at com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration(NewRegistrationTest.java:19)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1627010197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1627010197'><pre>java.lang.AssertionError: New User Registration has Failed
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.pageobjects.RegistrationPage.EnterAuthenticationDetails(RegistrationPage.java:34)
+	at com.myproject.automationframework.tests.NewRegistrationTest.newUserRegistration(NewRegistrationTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.myproject.automationframework.tests.NewRegistrationTest@56ac3a89</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.viewStaffDetails()'><b>viewStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 1, [[Ljava.lang.Object;@2552f2cb<br/>
+<a href="#Output-1415439780" onClick='toggleBox("Output-1415439780", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1415439780" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1415439780">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+[FAILURE] Requested record is not present in the list||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Requested record is not present in the list
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.clickViewButton(Actions.java:286)
+	at com.myproject.automationframework.pageobjects.EntitiesStaffPage.viewStaffDetailsandConfirm(EntitiesStaffPage.java:65)
+	at com.myproject.automationframework.tests.EntitiesStaffTest.viewStaffDetails(EntitiesStaffTest.java:98)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1415439780", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1415439780'><pre>java.lang.AssertionError: Requested record is not present in the list
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.myproject.automationframework.utilities.Actions.HardAssertFail(Actions.java:126)
+	at com.myproject.automationframework.utilities.Actions.clickViewButton(Actions.java:286)
+	at com.myproject.automationframework.pageobjects.EntitiesStaffPage.viewStaffDetailsandConfirm(EntitiesStaffPage.java:65)
+	at com.myproject.automationframework.tests.EntitiesStaffTest.viewStaffDetails(EntitiesStaffTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 1, [[Ljava.lang.Object;@33352f32<br/>
+<a href="#Output-1262548561" onClick='toggleBox("Output-1262548561", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1262548561" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1262548561">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Information Tech>||<br/>
+<EnterText on New Branch Code textbox as IT001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Information Tech>||<br/>
+<EnterText on New Branch Code textbox as IT001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 2, [[Ljava.lang.Object;@5f3b9c57<br/>
+<a href="#Output-1947020920" onClick='toggleBox("Output-1947020920", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1947020920" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1947020920">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as System Support>||<br/>
+<EnterText on New Branch Code textbox as SS001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as System Support>||<br/>
+<EnterText on New Branch Code textbox as SS001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 3, [[Ljava.lang.Object;@1e044120<br/>
+<a href="#Output-282003944" onClick='toggleBox("Output-282003944", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-282003944" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-282003944">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Human Resource>||<br/>
+<EnterText on New Branch Code textbox as HR001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Human Resource>||<br/>
+<EnterText on New Branch Code textbox as HR001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 4, [[Ljava.lang.Object;@2cf23c81<br/>
+<a href="#Output-2099051403" onClick='toggleBox("Output-2099051403", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2099051403" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2099051403">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Finance>||<br/>
+<EnterText on New Branch Code textbox as FN001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Finance>||<br/>
+<EnterText on New Branch Code textbox as FN001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 5, [[Ljava.lang.Object;@3624da92<br/>
+<a href="#Output-1289869008" onClick='toggleBox("Output-1289869008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1289869008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1289869008">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Legal>||<br/>
+<EnterText on New Branch Code textbox as LG001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Legal>||<br/>
+<EnterText on New Branch Code textbox as LG001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 6, [[Ljava.lang.Object;@35fe2125<br/>
+<a href="#Output-1659840424" onClick='toggleBox("Output-1659840424", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1659840424" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1659840424">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Customer Service>||<br/>
+<EnterText on New Branch Code textbox as CS001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Customer Service>||<br/>
+<EnterText on New Branch Code textbox as CS001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 7, [[Ljava.lang.Object;@94f6bfb<br/>
+<a href="#Output-1511574902" onClick='toggleBox("Output-1511574902", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1511574902" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1511574902">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Operations>||<br/>
+<EnterText on New Branch Code textbox as OP001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Operations>||<br/>
+<EnterText on New Branch Code textbox as OP001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 8, [[Ljava.lang.Object;@34645867<br/>
+<a href="#Output-1958402562" onClick='toggleBox("Output-1958402562", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1958402562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1958402562">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Marketing>||<br/>
+<EnterText on New Branch Code textbox as MR001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Marketing>||<br/>
+<EnterText on New Branch Code textbox as MR001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 9, [[Ljava.lang.Object;@2484f433<br/>
+<a href="#Output-323823279" onClick='toggleBox("Output-323823279", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-323823279" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-323823279">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Sales>||<br/>
+<EnterText on New Branch Code textbox as IB001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Sales>||<br/>
+<EnterText on New Branch Code textbox as IB001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 10, [[Ljava.lang.Object;@60b71e8f<br/>
+<a href="#Output-1901238627" onClick='toggleBox("Output-1901238627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1901238627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1901238627">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Accounting>||<br/>
+<EnterText on New Branch Code textbox as AC001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Accounting>||<br/>
+<EnterText on New Branch Code textbox as AC001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 11, [[Ljava.lang.Object;@1255b1d1<br/>
+<a href="#Output-1574029810" onClick='toggleBox("Output-1574029810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1574029810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1574029810">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Comm>||<br/>
+<EnterText on New Branch Code textbox as BC001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Comm>||<br/>
+<EnterText on New Branch Code textbox as BC001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 12, [[Ljava.lang.Object;@464649c<br/>
+<a href="#Output-244185498" onClick='toggleBox("Output-244185498", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-244185498" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-244185498">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Real Estate>||<br/>
+<EnterText on New Branch Code textbox as RE001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Real Estate>||<br/>
+<EnterText on New Branch Code textbox as RE001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 13, [[Ljava.lang.Object;@7c22d4f<br/>
+<a href="#Output-1832669781" onClick='toggleBox("Output-1832669781", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1832669781" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1832669781">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Admin>||<br/>
+<EnterText on New Branch Code textbox as BA001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Admin>||<br/>
+<EnterText on New Branch Code textbox as BA001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 14, [[Ljava.lang.Object;@5f59185e<br/>
+<a href="#Output-366803687" onClick='toggleBox("Output-366803687", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-366803687" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-366803687">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Management>||<br/>
+<EnterText on New Branch Code textbox as BM001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Business Management>||<br/>
+<EnterText on New Branch Code textbox as BM001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.addNewBranch()'><b>addNewBranch</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 15, [[Ljava.lang.Object;@60bdf15d<br/>
+<a href="#Output-408069119" onClick='toggleBox("Output-408069119", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-408069119" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-408069119">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Consulting>||<br/>
+<EnterText on New Branch Code textbox as CN001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Branch Button||<br/>
+<EnterText on New Branch Name textbox as Consulting>||<br/>
+<EnterText on New Branch Code textbox as CN001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 2, [[Ljava.lang.Object;@47da3952<br/>
+<a href="#Output-1967496309" onClick='toggleBox("Output-1967496309", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1967496309" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1967496309">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as John Laker>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as John Laker>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 3, [[Ljava.lang.Object;@51e4ccb3<br/>
+<a href="#Output-1972143064" onClick='toggleBox("Output-1972143064", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1972143064" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1972143064">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Awotwi Uma>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Awotwi Uma>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 4, [[Ljava.lang.Object;@46e8a539<br/>
+<a href="#Output-1978209605" onClick='toggleBox("Output-1978209605", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1978209605" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1978209605">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Amita Micah>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Amita Micah>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 5, [[Ljava.lang.Object;@495083a0<br/>
+<a href="#Output-265824587" onClick='toggleBox("Output-265824587", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-265824587" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-265824587">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Nedeljka Jarred>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Nedeljka Jarred>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 6, [[Ljava.lang.Object;@5fd62371<br/>
+<a href="#Output-276869158" onClick='toggleBox("Output-276869158", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-276869158" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-276869158">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 7, [[Ljava.lang.Object;@28a0fd6c<br/>
+<a href="#Output-1636322481" onClick='toggleBox("Output-1636322481", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1636322481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1636322481">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Lia Kliment>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Lia Kliment>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 8, [[Ljava.lang.Object;@2b62442c<br/>
+<a href="#Output-731243659" onClick='toggleBox("Output-731243659", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-731243659" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-731243659">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Rebecca Marylyn>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Rebecca Marylyn>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 9, [[Ljava.lang.Object;@66629f63<br/>
+<a href="#Output-747158012" onClick='toggleBox("Output-747158012", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-747158012" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-747158012">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Jurre Ognjen>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Jurre Ognjen>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 10, [[Ljava.lang.Object;@841e575<br/>
+<a href="#Output-1658512704" onClick='toggleBox("Output-1658512704", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1658512704" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1658512704">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Jarek Gereon>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Jarek Gereon>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 11, [[Ljava.lang.Object;@27a5328c<br/>
+<a href="#Output-1311292881" onClick='toggleBox("Output-1311292881", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1311292881" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1311292881">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Juliette Luciano>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Juliette Luciano>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 12, [[Ljava.lang.Object;@1e5f4170<br/>
+<a href="#Output-628392976" onClick='toggleBox("Output-628392976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-628392976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-628392976">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Kirstie Lexy>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Kirstie Lexy>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 13, [[Ljava.lang.Object;@6c345c5f<br/>
+<a href="#Output-767436045" onClick='toggleBox("Output-767436045", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-767436045" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-767436045">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Paulus Aura>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Paulus Aura>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 14, [[Ljava.lang.Object;@6b5966e1<br/>
+<a href="#Output-660595570" onClick='toggleBox("Output-660595570", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-660595570" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-660595570">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Casper Urien>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Casper Urien>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.addNewStaff()'><b>addNewStaff</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 15, [[Ljava.lang.Object;@65e61854<br/>
+<a href="#Output-2015999862" onClick='toggleBox("Output-2015999862", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2015999862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2015999862">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Roald Radovan>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Create New Staff Button||<br/>
+<EnterText on New Staff Name textbox as Roald Radovan>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.deleteBranchDetails()'><b>deleteBranchDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 1, [[Ljava.lang.Object;@1568159<br/>
+<a href="#Output-593103894" onClick='toggleBox("Output-593103894", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-593103894" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-593103894">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Delete Branch Button||<br/>
+Clicked on Cancel Delete Branch Button||<br/>
+Clicked on Delete Branch Button||<br/>
+Clicked on Confirm Delete Branch Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.deleteStaffDetails()'><b>deleteStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 1, [[Ljava.lang.Object;@4fcee388<br/>
+<a href="#Output-1717473929" onClick='toggleBox("Output-1717473929", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1717473929" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1717473929">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Delete Staff Button||<br/>
+Clicked on Cancel Delete Staff Button||<br/>
+Clicked on Delete Staff Button||<br/>
+Clicked on Confirm Delete Staff Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.editBranchDetails()'><b>editBranchDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 2, [[Ljava.lang.Object;@6f80fafe<br/>
+<a href="#Output-1455855843" onClick='toggleBox("Output-1455855843", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1455855843" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1455855843">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on Edit Branch Button||<br/>
+Details are as expected when editing Branch Details||<br/>
+<EnterText on New Branch Name textbox as Operations Research>||<br/>
+<EnterText on New Branch Code textbox as OR001>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Edit Branch Button||<br/>
+<EnterText on New Branch Name textbox as Operations Research>||<br/>
+<EnterText on New Branch Code textbox as OR001>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.editStaffDetails()'><b>editStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 1, [[Ljava.lang.Object;@3af17be2<br/>
+<a href="#Output-237373286" onClick='toggleBox("Output-237373286", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-237373286" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-237373286">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Edit Staff Button||<br/>
+Details are as expected when editing Staff Details||<br/>
+<EnterText on New Staff Name textbox as John Lakers>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Edit Staff Button||<br/>
+<EnterText on New Staff Name textbox as John Lakers>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.editStaffDetails()'><b>editStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 2, [[Ljava.lang.Object;@f9879ac<br/>
+<a href="#Output-1155757579" onClick='toggleBox("Output-1155757579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1155757579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1155757579">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on Edit Staff Button||<br/>
+Details are as expected when editing Staff Details||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Edit Staff Button||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.searchBranchesAndConfirm()'><b>searchBranchesAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 1, [[Ljava.lang.Object;@37f21974<br/>
+<a href="#Output-795748540" onClick='toggleBox("Output-795748540", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-795748540" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-795748540">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+<EnterText on Search Branch textbox as Software Tech>||<br/>
+Clicked on Search Branch Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.searchBranchesAndConfirm()'><b>searchBranchesAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 2, [[Ljava.lang.Object;@5f4d427e<br/>
+<a href="#Output-611289995" onClick='toggleBox("Output-611289995", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-611289995" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-611289995">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+<EnterText on Search Branch textbox as AC001>||<br/>
+Clicked on Search Branch Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.searchStaffAndConfirm()'><b>searchStaffAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 1, [[Ljava.lang.Object;@6e521c1e<br/>
+<a href="#Output-436094532" onClick='toggleBox("Output-436094532", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-436094532" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-436094532">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+<EnterText on Search Staff textbox as John Lakers>||<br/>
+Clicked on Search Staff Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.searchStaffAndConfirm()'><b>searchStaffAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 2, [[Ljava.lang.Object;@224b4d61<br/>
+<a href="#Output-54960993" onClick='toggleBox("Output-54960993", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-54960993" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-54960993">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+<EnterText on Search Staff textbox as Human Resource>||<br/>
+Clicked on Search Staff Button||<br/>
+There are no records available||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.LoginUserDetailsTest.verifyLoginLogoutUserDeatils()'><b>verifyLoginLogoutUserDeatils</b><br>Test class: com.myproject.automationframework.tests.LoginUserDetailsTest<br>Parameters: 1, [[Ljava.lang.Object;@5d5d9e5<br/>
+<a href="#Output-99808631" onClick='toggleBox("Output-99808631", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-99808631" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-99808631">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Seetings Menu||<br/>
+User Details are as expected when viewing user Details||<br/>
+<EnterText on First name textbox as Administrator>||<br/>
+<EnterText on Last name textbox as Administrator>||<br/>
+<EnterText on Email textbox as admin@localhost>||<br/>
+Clicked on Save button||<br/>
+Settings are saved successfully.||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.myproject.automationframework.tests.LoginUserDetailsTest@490ab905</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.viewBranchesAndConfirm()'><b>viewBranchesAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 1, [[Ljava.lang.Object;@303e3593<br/>
+<a href="#Output-1262110193" onClick='toggleBox("Output-1262110193", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1262110193" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1262110193">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on View Branch Button||<br/>
+Details are as expected when viewing Branch Details||<br/>
+Clicked on Back Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.viewBranchesAndConfirm()'><b>viewBranchesAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 2, [[Ljava.lang.Object;@4ef27d66<br/>
+<a href="#Output-1648700617" onClick='toggleBox("Output-1648700617", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1648700617" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1648700617">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on View Branch Button||<br/>
+Details are as expected when viewing Branch Details||<br/>
+Clicked on Back Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesBranchTest.viewBranchesAndConfirm()'><b>viewBranchesAndConfirm</b><br>Test class: com.myproject.automationframework.tests.EntitiesBranchTest<br>Parameters: 3, [[Ljava.lang.Object;@362a019c<br/>
+<a href="#Output-1756819670" onClick='toggleBox("Output-1756819670", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1756819670" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1756819670">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Branch Menu||<br/>
+Clicked on View Branch Button||<br/>
+Details are as expected when viewing Branch Details||<br/>
+Clicked on Back Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.myproject.automationframework.tests.EntitiesBranchTest@3f49dace</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.viewStaffDetails()'><b>viewStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 2, [[Ljava.lang.Object;@1d9bec4d<br/>
+<a href="#Output-1496220730" onClick='toggleBox("Output-1496220730", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1496220730" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1496220730">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on View Staff Button||<br/>
+Details are as expected when viewing Staff Details||<br/>
+Clicked on Back Button||<br/>
+Clicked on Edit Staff Button||<br/>
+Details are as expected when editing Staff Details||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Edit Staff Button||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+<tr>
+<td title='com.myproject.automationframework.tests.EntitiesStaffTest.viewStaffDetails()'><b>viewStaffDetails</b><br>Test class: com.myproject.automationframework.tests.EntitiesStaffTest<br>Parameters: 3, [[Ljava.lang.Object;@5c48c0c0<br/>
+<a href="#Output-1324173038" onClick='toggleBox("Output-1324173038", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1324173038" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1324173038">
+Clicked on Login Link||<br/>
+<EnterText on Login textbox as admin>||<br/>
+<EnterText on Password textbox as admin>||<br/>
+Clicked on Authenticate button||<br/>
+Clicked on Entities Menu||<br/>
+Clicked on Entities Staff Menu||<br/>
+Clicked on View Staff Button||<br/>
+Details are as expected when viewing Staff Details||<br/>
+Clicked on Back Button||<br/>
+Clicked on Edit Staff Button||<br/>
+Details are as expected when editing Staff Details||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Cancel Button||<br/>
+Clicked on Edit Staff Button||<br/>
+<EnterText on New Staff Name textbox as Cecilia Eemil>||<br/>
+Clicked on Save Button||<br/>
+Clicked on Account Menu||<br/>
+Clicked on Account Logout||<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.myproject.automationframework.tests.EntitiesStaffTest@1e397ed7</td></tr>
+</table><p>
+</body>
+</html>

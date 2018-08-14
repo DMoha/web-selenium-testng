@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GurukulamTestSuite]">
+  <test name="FunctionalityTest(failed)">
+    <classes>
+      <class name="com.myproject.automationframework.tests.EntitiesStaffTest">
+        <methods>
+          <include name="endIteration"/>
+          <include name="addNewStaff" invocation-numbers="0"/>
+          <include name="viewStaffDetails" invocation-numbers="0"/>
+          <include name="startIteration"/>
+        </methods>
+      </class> <!-- com.myproject.automationframework.tests.EntitiesStaffTest -->
+      <class name="com.myproject.automationframework.tests.NewRegistrationTest">
+        <methods>
+          <include name="endIteration"/>
+          <include name="newUserRegistration" invocation-numbers="0 1"/>
+          <include name="startIteration"/>
+        </methods>
+      </class> <!-- com.myproject.automationframework.tests.NewRegistrationTest -->
+      <class name="com.myproject.automationframework.tests.LoginUserDetailsTest">
+        <methods>
+          <include name="endIteration"/>
+          <include name="startIteration"/>
+        </methods>
+      </class> <!-- com.myproject.automationframework.tests.LoginUserDetailsTest -->
+      <class name="com.myproject.automationframework.tests.EntitiesBranchTest">
+        <methods>
+          <include name="endIteration"/>
+          <include name="collectResults"/>
+          <include name="editBranchDetails" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="setupApplication"/>
+          <include name="startIteration"/>
+        </methods>
+      </class> <!-- com.myproject.automationframework.tests.EntitiesBranchTest -->
+    </classes>
+  </test> <!-- FunctionalityTest(failed) -->
+</suite> <!-- Failed suite [GurukulamTestSuite] -->
